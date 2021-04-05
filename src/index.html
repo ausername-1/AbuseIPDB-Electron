@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AbuseIPDB Electron</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">AbuseIPDB Electron</h1>
+      <form id="checkip" class="box">
+        <div class="field">
+          <label class="label">IP</label>
+          <div class="control">
+            <input class="input" id="ip" placeholder="127.0.0.1">
+          </div>
+        </div>
+  
+        <button class="button is-primary" id="submit">Check IP</button>
+      </form>
+  
+      <div class="box">
+        <label id="abuse"><b>Abuse Confidence:</b><br></label>
+        <label id="totalreports"><b>Total Reports:</b><br></label>
+        <label id="domain"><b>Domain:</b><br></label>
+        <label id="isp"><b>ISP:</b><br></label>
+        <label id="countrycode"><b>Country Code:</b><br></label>
+        <label id="usagetype"><b>Usage Type:</b><br></label>
+        <label id="whitelisted"><b>Whitelisted?:</b><br></label>
+        <label id="lastreported"><b>Last Reported:</b><br></label>
+     </div>
+
+      <form id="reportip" class="box">
+        <div class="field">
+          <label class="label">IP</label>
+          <div class="control">
+            <input class="input" required="true" id="ip2" placeholder="127.0.0.1">
+          </div>
+          <div class="field">
+            <label class="label">API Key (optional)</label>
+            <div class="control">
+              <input class="input" id="apikey" placeholder="API Key">
+            </div>
+            <div class="field">
+              <label class="label">Reason</label>
+              <div class="control">
+                <input class="input" required="true" id="reason" placeholder="Reason">
+              </div>
+              <div class="field">
+                <label class="label">Category</label>
+                <div class="control">
+                  <input class="input" required="true" id="category" placeholder="Category">
+                </div>
+        </div>
+  
+        <button class="button is-primary" id="submit">Report IP</button>
+      </form>
+    </div>
+    <script src="render.js" defer></script>
+  </body>
+</html>
